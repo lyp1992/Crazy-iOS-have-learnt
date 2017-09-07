@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUg-HJ-5bD">
+                                <rect key="frame" x="0.0" y="138" width="375" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="bzU-q8-yly"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="toc-xd-911"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kA5-fT-tIu">
+                                <rect key="frame" x="164" y="376" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="1by-WV-lcJ"/>
+                                    <constraint firstAttribute="height" constant="30" id="qzJ-WK-cgl"/>
+                                </constraints>
+                                <state key="normal" title="开始"/>
+                                <connections>
+                                    <action selector="startMoveClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lAP-9J-b1j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUI-XB-SrS">
+                                <rect key="frame" x="164" y="442" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="6Dk-PS-zDW"/>
+                                    <constraint firstAttribute="height" constant="30" id="8yO-P1-IjT"/>
+                                </constraints>
+                                <state key="normal" title="重置"/>
+                                <connections>
+                                    <action selector="resetClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eEx-c6-wba"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kA5-fT-tIu" firstAttribute="top" secondItem="XUg-HJ-5bD" secondAttribute="bottom" constant="22" id="Je7-hR-e8P"/>
+                            <constraint firstAttribute="trailing" secondItem="XUg-HJ-5bD" secondAttribute="trailing" id="Kth-Af-7BY"/>
+                            <constraint firstItem="kA5-fT-tIu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N8c-Zk-qHD"/>
+                            <constraint firstItem="XUg-HJ-5bD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="enQ-QV-2Y1"/>
+                            <constraint firstItem="XUg-HJ-5bD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="118" id="iEd-m8-Fzo"/>
+                            <constraint firstItem="DUI-XB-SrS" firstAttribute="top" secondItem="kA5-fT-tIu" secondAttribute="bottom" constant="36" id="lHM-ma-9FT"/>
+                            <constraint firstItem="XUg-HJ-5bD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wbB-RO-PwO"/>
+                            <constraint firstItem="DUI-XB-SrS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zaC-vB-Vvm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="XUg-HJ-5bD" id="NUW-Z6-4DQ"/>
+                        <outlet property="startButton" destination="kA5-fT-tIu" id="Wna-c7-s1n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.80000000000000004" y="85.907046476761622"/>
+        </scene>
+    </scenes>
+</document>
